@@ -1,0 +1,21 @@
+Source: libtscam
+Priority: optional
+Maintainer: James Fidell <james@openastroproject.org>
+Build-Depends: debhelper (>=@@COMPAT@@)
+Standards-Version: 4.1.4
+Section: libs
+
+Package: libtscam
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Teleskop Service camera interface library
+ Userspace library for connecting to Teleskop Service astronomy cameras
+
+Package: libtscam-dev
+Section: libdevel
+Architecture: any
+Depends: libtscam (= ${binary:Version}), ${misc:Depends}
+Description: Teleskop Service camera interface library development files
+ Development headers for libtscam, a userspace library for controlling
+ Teleskop Service astronomy cameras

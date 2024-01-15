@@ -1,0 +1,12 @@
+Create libtscam pkg-config file template
+--- libtscam.pc.in	1970-01-01 01:00:00.000000000 +0100
++++ libtscam.pc.in	2016-11-05 23:11:43.247858211 +0000
+@@ -0,0 +1,8 @@
++libdir=@LIBDIR@
++includedir=/usr/include
++
++Name: libtscam
++Description: Teleskop Service camera interface library
++Version: @VERSION@
++Libs: -L${libdir} -ltscam
++Cflags: -I${includedir}
