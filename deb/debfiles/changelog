@@ -1,5 +1,12 @@
+libtscam (1.55.24621-1) jammy; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Sun, 18 Feb 2024 22:04:00 +0000
+
 libtscam (1.55.24239-1) jammy; urgency=medium
 
   * Initial release
 
  -- James Fidell <james@openastroproject.org>  Mon, 8 Jan 2024 19:23:55 +0000
+

@@ -1,4 +1,4 @@
-VERSION=1.55.24239
+VERSION=1.55.24621
 
 override_dh_auto_build:
 	dh_auto_build -- LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH) VERSION=DEBVERSION
@@ -6,17 +6,17 @@ override_dh_auto_build:
 override_dh_auto_install:
 	case $(DEB_BUILD_ARCH) in \
 		i386) \
-			ln x86/libtscam.bin x86/libtscam.so; \
-			ln x86/libtscam.bin x86/libtscam.so.$(VERSION);; \
+			ln x86/libtscam.so x86/libtscam.so; \
+			ln x86/libtscam.so x86/libtscam.so.$(VERSION);; \
 		amd64) \
-			ln x64/libtscam.bin x64/libtscam.so; \
-			ln x64/libtscam.bin x64/libtscam.so.$(VERSION);; \
+			ln x64/libtscam.so x64/libtscam.so; \
+			ln x64/libtscam.so x64/libtscam.so.$(VERSION);; \
 		aarch64) \
-			ln arm64/libtscam.bin arm64/libtscam.so; \
-			ln arm64/libtscam.bin arm64/libtscam.so.$(VERSION);; \
+			ln arm64/libtscam.so arm64/libtscam.so; \
+			ln arm64/libtscam.so arm64/libtscam.so.$(VERSION);; \
 		armhf) \
-			ln armhf/libtscam.bin armhf/libtscam.so; \
-			ln armhf/libtscam.bin armhf/libtscam.so.$(VERSION);; \
+			ln armhf/libtscam.so armhf/libtscam.so; \
+			ln armhf/libtscam.so armhf/libtscam.so.$(VERSION);; \
 	esac
 	dh_auto_install -- SRCDIR=$(CURDIR) ARCH=$(DEB_TARGET_ARCH) \
 		INCDIR=$(CURDIR)/debian/tmp/usr/include \
